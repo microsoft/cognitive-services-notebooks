@@ -1,3 +1,24 @@
+[![Build Status](https://travis-ci.org/Microsoft/cognitive-services-notebooks.svg?branch=master)](https://travis-ci.org/Microsoft/cognitive-services-notebooks) [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/Microsoft/cognitive-services-notebooks/master) [![AzureNB](https://notebooks.azure.com/launch.png)](https://notebooks.azure.com/import/gh/Microsoft/cognitive-services-notebooks)
+# Interactive Jupyter notebooks for Microsoft Cognitive Services 
+This repository contains Jupyter notebooks that illustrate various features of [Microsoft Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/). 
+
+## How to run notebooks
+* The simplest way to run the samples is via [MyBinder](https://mybinder.org) by clicking on [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/Microsoft/cognitive-services-notebooks/master)
+* If you have a Microsoft LiveID, you can also run the notebooks on [Azure notebooks](https://notebooks.azure.com) by clicking on [![AzureNB](https://notebooks.azure.com/launch.png)](https://notebooks.azure.com/import/gh/Microsoft/cognitive-services-notebooks).
+* To run notebooks on a local Jupyter installation:
+    * Clone the repo: `git clone https://github.com/Microsoft/cognitive-services-notebooks.git`
+    * Go into the samples directory: `cd cognitive-services-notebooks`
+    * Install the required packages: `pip install -r requirements.txt` or `conda install --file requirements.txt` 
+    * Start Jupyter notebooks: `jupyter notebook`
+
+## How to generate markdown
+While you can use `jupyter nbconvert --to-markdown` to convert the notebooks to Markdown, you can also use the tool `notebook_to_markdown` in the [tools](tools) directory as follows:
+
+``
+python notebook_to_markdown.py notebook_name [--output-dir output_directory]
+``
+
+`notebook_to_markdown` generates self-contained markdown files by replacing image references with inlined base64-encoded images. Therefore, HTML output generated from the resulting markdown files are also fully self-contained.
 
 # Contributing
 
