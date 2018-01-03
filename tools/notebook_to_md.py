@@ -38,7 +38,7 @@ def notebook_to_md(nbfile, output_dir):
         
     writer = nbconvert.writers.FilesWriter()
     writer.write(mdtext, resources, base_nb_name)
-    shutil.rmtree(resources["output_files_dir"])
+    shutil.rmtree(resources["output_files_dir"], ignore_errors=True)
     
     return mdtext, resources
 
