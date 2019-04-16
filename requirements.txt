@@ -2,3 +2,4 @@ requests==2.18.4
 requests-oauthlib==0.8.0
 matplotlib==2.1.0
 Pillow==4.2.1
+azure-cognitiveservices-language-textanalytics==0.2.0
